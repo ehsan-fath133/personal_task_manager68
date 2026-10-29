@@ -12,5 +12,5 @@ def load_task():
     try:
         with open("tasks.json", "r", encoding="utf-8") as file:
             return json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
+    except FileNotFoundError:
         return []
